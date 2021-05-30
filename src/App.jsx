@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-
-import MainPage from "./components/main";
 import styled from "styled-components";
+
+import { BrowserRouter, Route } from "react-router-dom";
+import MainPage from "./components/main";
+import MapPage from "./components/map";
 
 const Container = styled.div`
   margin: auto;
@@ -17,6 +18,7 @@ function App() {
     <Container>
       <BrowserRouter>
         <Route path="/" exact component={MainPage} />
+        <Route path="/map" component={MapPage} />
       </BrowserRouter>
     </Container>
   );
