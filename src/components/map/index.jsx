@@ -1,11 +1,21 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+
+import NavigationBar from "../NavigationBar";
+
 import { PLACES } from "../../data/places";
 import { MARKER_IMG_SRC } from "../../constants/constants";
 
 const { kakao } = window;
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`;
+
+const KakaoMap = styled.div`
   width: 100%;
   height: 100%;
 `;
@@ -48,5 +58,10 @@ export default function MapPage() {
     marker.setMap(map);
   };
 
-  return <Container id="kakao-map" />;
+  return (
+    <Container>
+      <KakaoMap id="kakao-map" />
+      <NavigationBar />
+    </Container>
+  );
 }
