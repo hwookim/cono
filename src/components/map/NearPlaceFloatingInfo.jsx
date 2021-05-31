@@ -35,8 +35,8 @@ const ImgContainer = styled.div`
 `;
 
 const PlaceImg = styled.img`
-  width: 100px;
   margin: 0 10px;
+  width: 27.5%;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
