@@ -47,6 +47,7 @@ const Comments = styled.span`
 const CommentIcon = styled.img`
   margin: 0 5px;
   height: 20px;
+  object-position: 0 3px;
 `;
 
 const Likes = styled.span`
