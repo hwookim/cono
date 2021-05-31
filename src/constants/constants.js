@@ -1,7 +1,7 @@
 import * as ICONS from "./icons";
 
-const MARKER_IMG_SRC =
-  "https://user-images.githubusercontent.com/45786387/120114352-c7323900-c1b9-11eb-8893-d1f93ccfef9d.png";
+const MARKER_IMG =
+  "https://github.com/hwookim/cono-client/blob/master/src/assets/marker.png?raw=true";
 
 const NAV_ITEMS = [
   {
@@ -30,4 +30,4 @@ const NAV_ITEMS = [
   },
 ];
 
-export { MARKER_IMG_SRC, NAV_ITEMS };
+export { MARKER_IMG, NAV_ITEMS };

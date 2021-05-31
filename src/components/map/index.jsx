@@ -4,7 +4,7 @@ import styled from "styled-components";
 import NavigationBar from "../NavigationBar";
 
 import { PLACES } from "../../data/places";
-import { MARKER_IMG_SRC } from "../../constants/constants";
+import { MARKER_IMG } from "../../constants/constants";
 
 const { kakao } = window;
 
@@ -35,13 +35,13 @@ export default function MapPage() {
   }, []);
 
   const drawMarker = (place) => {
-    const width = 48;
-    const height = 52;
+    const width = 36;
+    const height = 36;
     const imageSize = new kakao.maps.Size(width, height);
     const imageOption = { offset: new kakao.maps.Point(width / 2, height) };
 
     const markerImage = new kakao.maps.MarkerImage(
-      MARKER_IMG_SRC,
+      MARKER_IMG,
       imageSize,
       imageOption
     );
