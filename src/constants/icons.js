@@ -10,7 +10,11 @@ import NAV_RANKING_INACTIVE from "../assets/icon/main_ui/ranking_grey.png";
 import NAV_USER_ACTIVE from "../assets/icon/main_ui/user_default.png";
 import NAV_USER_INACTIVE from "../assets/icon/main_ui/user_grey.png";
 
-export {
+import COMMENT from "../assets/icon/comment_and_text/comment_grey.png";
+
+import LIKE_ACTIVE from "../assets/icon/comment_and_text/like_default.png";
+
+const ICONS = {
   NAV_MAP_ACTIVE,
   NAV_MAP_INACTIVE,
   NAV_VIDEO_ACTIVE,
@@ -19,4 +23,8 @@ export {
   NAV_RANKING_INACTIVE,
   NAV_USER_ACTIVE,
   NAV_USER_INACTIVE,
+  COMMENT,
+  LIKE_ACTIVE,
 };
+
+export default ICONS;

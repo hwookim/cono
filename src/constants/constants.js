@@ -1,4 +1,4 @@
-import * as ICONS from "./icons";
+import ICONS from "./icons";
 
 const MARKER_IMG =
   "https://github.com/hwookim/cono-client/blob/master/src/assets/marker.png?raw=true";

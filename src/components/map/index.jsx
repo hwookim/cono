@@ -7,6 +7,7 @@ import { PLACES } from "../../data/places";
 import { MARKER_IMG } from "../../constants/constants";
 import SearchBar from "../SearchBar";
 import NearPlaceFloatingInfo from "./NearPlaceFloatingInfo";
+import PlaceList from "./PlaceList";
 
 const { kakao } = window;
 
@@ -65,6 +66,7 @@ export default function MapPage() {
       <SearchBar />
       <NearPlaceFloatingInfo places={PLACES} />
       <KakaoMap id="kakao-map" />
+      <PlaceList places={PLACES} />
       <NavigationBar />
     </Container>
   );

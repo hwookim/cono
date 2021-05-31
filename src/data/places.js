@@ -7,6 +7,8 @@ const PLACES = [
     price: "3곡에 천원",
     photo:
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210322_282%2F1616397113495viWn7_JPEG%2F3rlflNXEAm3dMyUTZQxsGPf0.jpg",
+    comments: [],
+    likes: 0,
   },
   {
     name: "제이코인노래연습장",
@@ -16,6 +18,8 @@ const PLACES = [
     price: "3곡에 천원",
     photo:
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190917_171%2F1568698196428qh6Jb_JPEG%2FPHeG2DFIUs56vXllopivLi8u.jpg",
+    comments: [],
+    likes: 0,
   },
   {
     name: "리코스타 코인노래방",
@@ -25,6 +29,8 @@ const PLACES = [
     price: "3곡에 천원",
     photo:
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191020_93%2F15715039352878rn9i_JPEG%2FrIEUlE2VIiCpln-KWDUv97-L.jpg",
+    comments: [],
+    likes: 0,
   },
 ];
 

@@ -13,6 +13,7 @@ const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   box-shadow: 0 -3px 5px 2px ${COLORS.MAIN_GRAY};
+  background-color: white;
 `;
 
 export default function NavigationBar() {
