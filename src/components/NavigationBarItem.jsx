@@ -8,11 +8,6 @@ const NavItem = styled(Link)`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  color: #bababa;
-
-  &:hover {
-    color: #da3b62;
-  }
 `;
 
 const NavImg = styled.div`
