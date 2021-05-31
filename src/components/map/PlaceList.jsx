@@ -51,7 +51,7 @@ export default function PlaceList({ places }) {
       </CloseButton>
       <Title>요즘 많이 찾는 노래방</Title>
       {places.map((place) => (
-        <PlaceListItem key={place.name} place={place} />
+        <PlaceListItem key={place.id} place={place} />
       ))}
     </Container>
   );

@@ -1,5 +1,6 @@
 const PLACES = [
   {
+    id: 0,
     name: "24시동국대코인노래연습장",
     address: "서울 중구 서애로1길 10",
     latitude: 37.56091632460447,
@@ -11,6 +12,7 @@ const PLACES = [
     likes: 0,
   },
   {
+    id: 1,
     name: "제이코인노래연습장",
     address: "서울 중구 필동로 3 삼지빌딩 지하",
     latitude: 37.56135575162827,
@@ -22,6 +24,7 @@ const PLACES = [
     likes: 0,
   },
   {
+    id: 2,
     name: "리코스타 코인노래방",
     address: "서울 중구 퇴계로 222",
     latitude: 37.56152409392275,

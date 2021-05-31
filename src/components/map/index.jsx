@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import $kakao from "../kakao";
 
@@ -6,6 +6,7 @@ import NavigationBar from "../NavigationBar";
 import SearchBar from "../SearchBar";
 import NearPlaceFloatingInfo from "./NearPlaceFloatingInfo";
 import PlaceList from "./PlaceList";
+import PlaceInfoOverlay from "./PlaceInfoOverlay";
 
 import { PLACES } from "../../data/places";
 
@@ -22,16 +23,34 @@ const KakaoMap = styled.div`
 `;
 
 export default function MapPage() {
+  const [place, setPlace] = useState(null);
+  const [isOverlayActive, setIsOverlayActive] = useState(false);
+
   useEffect(() => {
     $kakao.initMap("kakao-map");
-    PLACES.map($kakao.drawMarker);
+    PLACES.map((place) => {
+      $kakao.drawMarker(place);
+      $kakao.addClickEventToMarker(place, openOverlay);
+    });
   }, []);
+
+  const openOverlay = (id) => {
+    setPlace(PLACES[id]);
+    setIsOverlayActive(true);
+  };
+
+  const closeOverlay = () => {
+    setIsOverlayActive(false);
+  };
 
   return (
     <Container>
       <SearchBar />
       <NearPlaceFloatingInfo places={PLACES} />
       <KakaoMap id="kakao-map" />
+      {isOverlayActive && (
+        <PlaceInfoOverlay place={place} onClose={closeOverlay} />
+      )}
       <PlaceList places={PLACES} />
       <NavigationBar />
     </Container>

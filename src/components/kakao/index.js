@@ -4,6 +4,7 @@ const { kakao } = window;
 
 const $kakao = (() => {
   let map;
+  const markers = [];
 
   const initMap = (targetID) => {
     const container = document.getElementById(targetID);
@@ -36,11 +37,19 @@ const $kakao = (() => {
     });
 
     marker.setMap(map);
+    markers.push(marker);
+  };
+
+  const addClickEventToMarker = (place, method) => {
+    kakao.maps.event.addListener(markers[place.id], "click", () => {
+      method(place.id);
+    });
   };
 
   return {
     initMap,
     drawMarker,
+    addClickEventToMarker,
   };
 })();
 
