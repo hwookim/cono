@@ -6,6 +6,7 @@ import NavigationBar from "../NavigationBar";
 import { PLACES } from "../../data/places";
 import { MARKER_IMG } from "../../constants/constants";
 import SearchBar from "../SearchBar";
+import NearPlaceFloatingInfo from "./NearPlaceFloatingInfo";
 
 const { kakao } = window;
 
@@ -62,6 +63,7 @@ export default function MapPage() {
   return (
     <Container>
       <SearchBar />
+      <NearPlaceFloatingInfo places={PLACES} />
       <KakaoMap id="kakao-map" />
       <NavigationBar />
     </Container>
