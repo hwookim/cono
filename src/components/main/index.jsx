@@ -28,6 +28,10 @@ const Title = styled.h1`
 `;
 
 export default function MainPage() {
+  setTimeout(() => {
+    location.replace("/map");
+  }, 1000);
+
   return (
     <Container>
       <Logo src={logoImg} />
