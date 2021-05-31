@@ -4,6 +4,9 @@ import styled from "styled-components";
 import { BrowserRouter, Route } from "react-router-dom";
 import MainPage from "./components/main";
 import MapPage from "./components/map";
+import VideoPage from "./components/video";
+import RankingPage from "./components/ranking";
+import MyPage from "./components/user";
 
 const Container = styled.div`
   margin: auto;
@@ -19,6 +22,9 @@ function App() {
       <BrowserRouter basename={"/cono"}>
         <Route path="/" exact component={MainPage} />
         <Route path="/map" component={MapPage} />
+        <Route path="/video" component={VideoPage} />
+        <Route path="/ranking" component={RankingPage} />
+        <Route path="/my" component={MyPage} />
       </BrowserRouter>
     </Container>
   );
