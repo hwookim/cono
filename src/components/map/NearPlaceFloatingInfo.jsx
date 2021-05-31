@@ -42,14 +42,19 @@ const PlaceImg = styled.img`
   border-radius: 15px;
 `;
 
-export default function NearPlaceFloatingInfo({ places }) {
+export default function NearPlaceFloatingInfo({ places, onClickImg }) {
   return (
     <Container>
       <InfoContainer>
         <InfoText>가까운 코인노래방을 확인하세요.</InfoText>
         <ImgContainer>
-          {places.map(({ name, photo }) => (
-            <PlaceImg key={name} src={photo} alt={name} />
+          {places.map(({ id, name, photo }) => (
+            <PlaceImg
+              key={id}
+              src={photo}
+              alt={name}
+              onClick={() => onClickImg(id)}
+            />
           ))}
         </ImgContainer>
       </InfoContainer>

@@ -46,7 +46,7 @@ export default function MapPage() {
   return (
     <Container>
       <SearchBar />
-      <NearPlaceFloatingInfo places={PLACES} />
+      <NearPlaceFloatingInfo places={PLACES} onClickImg={openOverlay} />
       <KakaoMap id="kakao-map" />
       {isOverlayActive && (
         <PlaceInfoOverlay place={place} onClose={closeOverlay} />
