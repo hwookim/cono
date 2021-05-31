@@ -1,0 +1,19 @@
+const MAIN = "#EE2C6C";
+const MAIN_GREY = "#C3C2C2";
+
+const ACTIVE_TEXT = "#404040";
+const INACTIVE_TEXT = "#7F7F7F";
+const GRAY_TEXT = "#7C7C7C";
+
+const TEXT_FIELD = "#FEF4F8";
+
+const COLORS = {
+  MAIN,
+  MAIN_GRAY: MAIN_GREY,
+  ACTIVE_TEXT,
+  INACTIVE_TEXT,
+  GRAY_TEXT,
+  TEXT_FIELD,
+};
+
+export default COLORS;

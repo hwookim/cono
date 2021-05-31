@@ -5,6 +5,7 @@ import NavigationBar from "../NavigationBar";
 
 import { PLACES } from "../../data/places";
 import { MARKER_IMG } from "../../constants/constants";
+import SearchBar from "../SearchBar";
 
 const { kakao } = window;
 
@@ -60,6 +61,7 @@ export default function MapPage() {
 
   return (
     <Container>
+      <SearchBar />
       <KakaoMap id="kakao-map" />
       <NavigationBar />
     </Container>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import NavigationBarItem from "./NavigationBarItem";
 
 import { NAV_ITEMS } from "../constants/constants";
+import COLORS from "../constants/colors";
 
 const Container = styled.nav`
   z-index: 999;
@@ -11,7 +12,7 @@ const Container = styled.nav`
   padding: 2px 10%;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 -3px 5px 2px #bababa;
+  box-shadow: 0 -3px 5px 2px ${COLORS.MAIN_GRAY};
 `;
 
 export default function NavigationBar() {
