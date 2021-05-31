@@ -4,10 +4,6 @@ body {
   padding: 0;
 }
 
-.main-color {
-  color: #da3b62;
-}
-
-.inactive-color {
-  color: #bababa;
+a {
+  text-decoration: none;
 }

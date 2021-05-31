@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import NavigationBarItem from "./NavigationBarItem";
+
+import { NAV_ITEMS } from "../constants/constants";
+
 const Container = styled.nav`
   z-index: 999;
   height: 48px;
@@ -10,37 +14,17 @@ const Container = styled.nav`
   box-shadow: 0 -3px 5px 2px #bababa;
 `;
 
-const NavItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  color: #bababa;
-
-  &:hover {
-    color: #da3b62;
-  }
-`;
-
-const NavIcon = styled.span`
-  font-size: 36px;
-`;
-
 export default function NavigationBar() {
   return (
     <Container>
-      <NavItem>
-        <NavIcon className="material-icons">place</NavIcon>
-      </NavItem>
-      <NavItem>
-        <NavIcon className="material-icons">play_circle_filled</NavIcon>
-      </NavItem>
-      <NavItem>
-        <NavIcon className="material-icons">leaderboard</NavIcon>
-      </NavItem>
-      <NavItem>
-        <NavIcon className="material-icons">account_circle</NavIcon>
-      </NavItem>
+      {NAV_ITEMS.map(({ name, to, active, inactive }) => (
+        <NavigationBarItem
+          key={name}
+          to={to}
+          activeImg={active}
+          inactiveImg={inactive}
+        />
+      ))}
     </Container>
   );
 }
