@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 import logoImg from "../../assets/logo.png";
 
@@ -28,9 +29,11 @@ const Title = styled.h1`
 `;
 
 export default function MainPage() {
+  const history = useHistory();
+
   setTimeout(() => {
-    location.replace("/map");
-  }, 1000);
+    history.push("/map");
+  }, 1500);
 
   return (
     <Container>

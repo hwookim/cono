@@ -16,7 +16,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <BrowserRouter>
+      <BrowserRouter basename={"/cono"}>
         <Route path="/" exact component={MainPage} />
         <Route path="/map" component={MapPage} />
       </BrowserRouter>
