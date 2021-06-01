@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import $kakao from "../kakao";
+import $kakao from "../../kakao";
 
 import NavigationBar from "../NavigationBar";
 import SearchBar from "../SearchBar";

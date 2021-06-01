@@ -1,4 +1,4 @@
-import { MARKER_IMG } from "../../constants/constants";
+import { MARKER_IMG } from "../constants/constants";
 
 const { kakao } = window;
 
