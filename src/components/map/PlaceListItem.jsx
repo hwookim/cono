@@ -8,6 +8,7 @@ const Container = styled.div`
   position: relative;
   padding: 10px 0;
   width: 100%;
+  white-space: nowrap;
 `;
 
 const PlaceImg = styled.img`
