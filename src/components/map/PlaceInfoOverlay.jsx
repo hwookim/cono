@@ -18,6 +18,7 @@ const Container = styled.div`
 `;
 
 const CloseButton = styled.span`
+  z-index: 998;
   position: absolute;
   top: 10px;
   right: 10px;
