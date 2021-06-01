@@ -28,6 +28,10 @@ const Title = styled.div`
   overflow: hidden;
 `;
 
+const ItemContainer = styled.div`
+  border-bottom: 1px solid ${COLORS.MAIN_GRAY};
+`;
+
 const CloseButton = styled.span`
   float: right;
 `;
@@ -51,7 +55,9 @@ export default function PlaceList({ places }) {
       </CloseButton>
       <Title>요즘 많이 찾는 노래방</Title>
       {places.map((place) => (
-        <PlaceListItem key={place.id} place={place} />
+        <ItemContainer key={place.id}>
+          <PlaceListItem place={place} />
+        </ItemContainer>
       ))}
     </Container>
   );

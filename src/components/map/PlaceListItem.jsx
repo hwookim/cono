@@ -8,7 +8,6 @@ const Container = styled.div`
   position: relative;
   padding: 10px 0;
   width: 100%;
-  border-bottom: 1px solid ${COLORS.MAIN_GRAY};
 `;
 
 const PlaceImg = styled.img`
