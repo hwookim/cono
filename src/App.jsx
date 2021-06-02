@@ -11,7 +11,7 @@ import MyPage from "./components/user";
 const Container = styled.div`
   margin: auto;
   max-width: 500px;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   box-shadow: 0 0 10px 2px gray;
   overflow: hidden;
 `;
