@@ -7,6 +7,7 @@ import MapPage from "./components/map";
 import VideoPage from "./components/video";
 import RankingPage from "./components/ranking";
 import MyPage from "./components/user";
+import PostPage from "./components/post";
 
 const Container = styled.div`
   margin: auto;
@@ -25,6 +26,7 @@ function App() {
         <Route path="/video" component={VideoPage} />
         <Route path="/ranking" component={RankingPage} />
         <Route path="/my" component={MyPage} />
+        <Route path="/post/:id" component={PostPage} />
       </BrowserRouter>
     </Container>
   );

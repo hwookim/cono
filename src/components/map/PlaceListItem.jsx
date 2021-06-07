@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import COLORS from "../../constants/colors";
 import ICONS from "../../constants/icons";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -60,7 +61,7 @@ const LikeIcon = styled.img`
   height: 20px;
 `;
 
-const DetailInfoButton = styled.button`
+const DetailInfoButton = styled(Link)`
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -88,7 +89,7 @@ export default function PlaceListItem({ place }) {
           <LikeIcon src={ICONS.LIKE_ACTIVE} />
         </CommunityInfo>
       </Info>
-      <DetailInfoButton>정보 보기</DetailInfoButton>
+      <DetailInfoButton to={"/post/" + place.id}>정보 보기</DetailInfoButton>
     </Container>
   );
 }
