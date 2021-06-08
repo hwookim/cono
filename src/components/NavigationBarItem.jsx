@@ -1,9 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-const NavItem = styled(Link)`
+const NavItem = styled.a`
   display: flex;
   flex-direction: column;
   height: 100%;
