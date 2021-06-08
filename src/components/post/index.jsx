@@ -4,6 +4,7 @@ import { PLACES } from "../../data/places";
 import styled from "styled-components";
 import COLORS from "../../constants/colors";
 import ICONS from "../../constants/icons";
+import NavigationBar from "../NavigationBar";
 
 const Container = styled.div`
   display: flex;
@@ -64,6 +65,7 @@ export default function PostPage() {
       <Score src={ICONS.SCORE} />
       <Line />
       <ReviewImg src={ICONS.REVIEWS} />
+      <NavigationBar />
     </Container>
   );
 }

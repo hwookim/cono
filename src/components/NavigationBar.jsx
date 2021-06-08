@@ -8,6 +8,10 @@ import COLORS from "../constants/colors";
 
 const Container = styled.nav`
   z-index: 999;
+  position: fixed;
+  bottom: 0;
+  width: 80vw;
+  max-width: 500px;
   height: 48px;
   padding: 2px 10%;
   display: flex;
