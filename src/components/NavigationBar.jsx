@@ -19,12 +19,13 @@ const Container = styled.nav`
 export default function NavigationBar() {
   return (
     <Container>
-      {NAV_ITEMS.map(({ name, to, active, inactive }) => (
+      {NAV_ITEMS.map(({ name, to, active, inactive, disabled }) => (
         <NavigationBarItem
           key={name}
           to={to}
           activeImg={active}
           inactiveImg={inactive}
+          disabled={disabled}
         />
       ))}
     </Container>

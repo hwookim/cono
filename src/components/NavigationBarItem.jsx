@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const NavItem = styled(Link)`
   display: flex;
@@ -16,20 +16,38 @@ const NavImg = styled.div`
   background: url(${({ defaultImg }) => defaultImg}) no-repeat;
   background-size: 36px;
 
-  &:hover {
-    background: url(${({ active }) => active}) no-repeat;
-    background-size: 36px;
-  }
+  ${({ disabled }) =>
+    disabled ??
+    css`
+      &:hover {
+        background: url(${({ active }) => active}) no-repeat;
+        background-size: 36px;
+      }
+    `}
 `;
 
-export default function NavigationBarItem({ to, activeImg, inactiveImg }) {
+export default function NavigationBarItem({
+  to,
+  activeImg,
+  inactiveImg,
+  disabled,
+}) {
+  const history = useHistory();
   const isActive = location.pathname.includes(to);
 
+  const link = () => {
+    if (disabled) {
+      return;
+    }
+    history.push(to);
+  };
+
   return (
-    <NavItem to={to}>
+    <NavItem onClick={link}>
       <NavImg
         defaultImg={isActive ? activeImg : inactiveImg}
         active={activeImg}
+        disabled={disabled}
       />
     </NavItem>
   );
