@@ -9,6 +9,7 @@ import NavigationBar from "../NavigationBar";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  height: calc(100% - 48px);
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
@@ -23,8 +24,13 @@ const PlaceImg = styled.img`
   object-fit: cover;
 `;
 
-const ImgSpace = styled.div`
-  height: 35vh;
+const InfoContainer = styled.div`
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 35vh;
+  background-color: white;
 `;
 
 const Title = styled.h1`
@@ -37,7 +43,7 @@ const Address = styled.div`
 `;
 
 const Line = styled.div`
-  margin: 20px 0;
+  margin: 10px 0;
   border-bottom: 1px solid #d2d2d2;
 `;
 
@@ -58,13 +64,15 @@ export default function PostPage() {
   return (
     <Container>
       <PlaceImg src={place.photo} />
-      <ImgSpace />
-      <Title>{place.name}</Title>
-      <Address>{place.address}</Address>
-      <Line />
-      <Score src={ICONS.SCORE} />
-      <Line />
-      <ReviewImg src={ICONS.REVIEWS} />
+      <InfoContainer>
+        <Title>{place.name}</Title>
+        <Address>{place.address}</Address>
+        <Line />
+        <Score src={ICONS.SCORE} />
+        <Line />
+        <ReviewImg src={ICONS.REVIEWS} />
+        <Line />
+      </InfoContainer>
       <NavigationBar />
     </Container>
   );
