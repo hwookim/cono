@@ -14,6 +14,9 @@ import COMMENT from "../assets/icon/comment_and_text/comment_grey.png";
 
 import LIKE_ACTIVE from "../assets/icon/comment_and_text/like_default.png";
 
+import SCORE from "../assets/icon/karaoke_info/good.png";
+import REVIEWS from "../assets/icon/karaoke_info/example.png";
+
 const ICONS = {
   NAV_MAP_ACTIVE,
   NAV_MAP_INACTIVE,
@@ -25,6 +28,8 @@ const ICONS = {
   NAV_USER_INACTIVE,
   COMMENT,
   LIKE_ACTIVE,
+  SCORE,
+  REVIEWS,
 };
 
 export default ICONS;
