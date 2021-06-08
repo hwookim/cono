@@ -48,7 +48,7 @@ const Line = styled.div`
 `;
 
 const Score = styled.img`
-  width: 50vw;
+  width: 200px;
   margin: auto;
 `;
 
